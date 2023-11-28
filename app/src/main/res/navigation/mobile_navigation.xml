@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.partnerapp.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="com.example.partnerapp.ui.order.OrderFragment"
+        android:label="Order"
+        tools:layout="@layout/fragment_order" />
+    <fragment
+        android:id="@+id/nav_inventory"
+        android:name="com.example.partnerapp.ui.inventory.InventoryFragment"
+        android:label="Inventory"
+        tools:layout="@layout/fragment_inventory" />
+
+    <fragment
+        android:id="@+id/nav_wallet"
+        android:name="com.example.partnerapp.ui.wallet.WalletFragment"
+        android:label="Wallet"
+        tools:layout="@layout/fragment_wallet" />
+
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.example.partnerapp.ui.notifications.NotificationFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification" />
+
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.example.partnerapp.ui.feedback.FeedbackFragment"
+        android:label="Feedback"
+        tools:layout="@layout/fragment_feedback" />
+
+</navigation>

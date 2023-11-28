@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.order.takeaway.TakeAwayFragment">
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:listitem="@layout/recycler_items"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/i1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="15dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order ID: "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#BI1234"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21-11-2023, "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:00 am"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bill Amount: "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs. 239"
+                        android:textColor="@color/black"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <!--
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="3dp"
+                                android:weightSum="3">
+                                &lt;!&ndash;<LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Provided: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/provided"
+                                        android:layout_width="30dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="230"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Consumed: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/consumed"
+                                        android:layout_width="30dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="123"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Available: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/available"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="12"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>&ndash;&gt;
+                            </LinearLayout>
+                -->
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/accepted_btn"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="Order Accepted"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/i2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/i1"
+        android:layout_marginBottom="10dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="15dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order ID: "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#BI1234"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21-11-2023, "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:00 am"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bill Amount: "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs. 239"
+                        android:textColor="@color/black"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <!--
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="3dp"
+                                android:weightSum="3">
+                                &lt;!&ndash;<LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Provided: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/provided"
+                                        android:layout_width="30dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="230"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Consumed: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/consumed"
+                                        android:layout_width="30dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="123"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Available: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/available"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="12"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>&ndash;&gt;
+                            </LinearLayout>
+                -->
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/movedtokds_btn"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="Moved to KDS"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/i3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/i2"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="15dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order ID: "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#BI1234"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21-11-2023, "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:00 am"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bill Amount: "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs. 239"
+                        android:textColor="@color/black"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <!--
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="3dp"
+                                android:weightSum="3">
+                                &lt;!&ndash;<LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Provided: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/provided"
+                                        android:layout_width="30dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="230"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Consumed: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/consumed"
+                                        android:layout_width="30dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="123"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Available: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/available"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="12"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>&ndash;&gt;
+                            </LinearLayout>
+                -->
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/delivered"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="Delivered"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/i4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/i3"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="15dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order ID: "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#BI1234"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21-11-2023, "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:00 am"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bill Amount: "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs. 239"
+                        android:textColor="@color/black"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <!--
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="3dp"
+                                android:weightSum="3">
+                                &lt;!&ndash;<LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Provided: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/provided"
+                                        android:layout_width="30dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="230"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Consumed: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/consumed"
+                                        android:layout_width="30dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="123"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Available: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/available"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="12"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>&ndash;&gt;
+                            </LinearLayout>
+                -->
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/canceled"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="Cancelled"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/i5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/i4"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="15dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order ID: "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#BI1234"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21-11-2023, "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:00 am"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bill Amount: "
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/comfortaa_medium"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs. 239"
+                        android:textColor="@color/black"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <!--
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="3dp"
+                                android:weightSum="3">
+                                &lt;!&ndash;<LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Provided: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/provided"
+                                        android:layout_width="30dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="230"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Consumed: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/consumed"
+                                        android:layout_width="30dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="123"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Available: "
+                                        android:layout_marginEnd="2dp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/comfortaa_medium"
+                                        android:textSize="12sp" />
+                                    <TextView
+                                        android:id="@+id/available"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="12"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>&ndash;&gt;
+                            </LinearLayout>
+                -->
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/delivered"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="Delivered"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</RelativeLayout>
